@@ -1,7 +1,7 @@
 # Public Subnets
 # These subnets have direct internet access via the internet gateway
 
-resource "aws_subnet" "public-ohio-east1a" {
+resource "aws_subnet" "public-ohio-east2a" {
   vpc_id                  = aws_vpc.sheri-vpc.id
   cidr_block              = "10.25.1.0/24"
   availability_zone       = "us-east-1a"
@@ -13,7 +13,7 @@ resource "aws_subnet" "public-ohio-east1a" {
   }   
 }
 
-resource "aws_subnet" "public-ohio-east1b" {
+resource "aws_subnet" "public-ohio-east2b" {
   vpc_id                  = aws_vpc.sheri-vpc.id
   cidr_block              = "10.25.2.0/24"
   availability_zone       = "us-east-1b"
@@ -25,7 +25,7 @@ resource "aws_subnet" "public-ohio-east1b" {
   }
 }
 
-resource "aws_subnet" "public-ohio-east1c" {
+resource "aws_subnet" "public-ohio-east2c" {
   vpc_id                  = aws_vpc.sheri-vpc.id
   cidr_block              = "10.25.3.0/24"
   availability_zone       = "us-east-1c"
@@ -41,7 +41,7 @@ resource "aws_subnet" "public-ohio-east1c" {
 # These subnets do not have direct internet access
 # They can reach the internet through the NAT gateway
 
-resource "aws_subnet" "private-ohio-east1a" {
+resource "aws_subnet" "private-ohio-east2a" {
   vpc_id            = aws_vpc.sheri-vpc.id
   cidr_block        = "10.25.11.0/24"
   availability_zone = "us-east-1a"
@@ -52,7 +52,7 @@ resource "aws_subnet" "private-ohio-east1a" {
   }
 }
 
-resource "aws_subnet" "private-ohio-east1b" {
+resource "aws_subnet" "private-ohio-east2b" {
   vpc_id            = aws_vpc.sheri-vpc.id
   cidr_block        = "10.25.12.0/24"
   availability_zone = "us-east-1b"
@@ -63,7 +63,7 @@ resource "aws_subnet" "private-ohio-east1b" {
   }
 }
 
-resource "aws_subnet" "private-ohio-east1c" {
+resource "aws_subnet" "private-ohio-east2c" {
   vpc_id            = aws_vpc.sheri-vpc.id
   cidr_block        = "10.25.13.0/24"
   availability_zone = "us-east-1c"
